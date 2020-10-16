@@ -35,12 +35,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
-    <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -48,14 +51,21 @@
     <ProjectReference Include="..\LYearUiSample.Application\LYearUiSample.Application.csproj" />
     <ProjectReference Include="..\LYearUiSample.HttpApi\LYearUiSample.HttpApi.csproj" />
     <ProjectReference Include="..\LYearUiSample.EntityFrameworkCore.DbMigrations\LYearUiSample.EntityFrameworkCore.DbMigrations.csproj" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="3.0.5" />
-    <PackageReference Include="Volo.Abp.Autofac" Version="3.0.5" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="3.0.5" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="3.0.5" />
-    <PackageReference Include="Volo.Abp.Identity.Web" Version="3.0.5" />
-    <PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="3.0.5" />
-    <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="3.0.5" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.Web" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.Identity.Web" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Web" Version="3.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Fody" Version="6.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

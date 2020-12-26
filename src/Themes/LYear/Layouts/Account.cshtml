@@ -6,7 +6,7 @@
 @using Volo.Abp.AspNetCore.MultiTenancy
 @using Volo.Abp.AspNetCore.Mvc.AntiForgery
 @using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.Localization
-@using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Components
+@using Volo.Abp.Ui.Branding
 @using Volo.Abp.AspNetCore.Mvc.UI.Widgets.Components.WidgetScripts
 @using Volo.Abp.Localization
 @using Volo.Abp.MultiTenancy
@@ -29,7 +29,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     @await Component.InvokeLayoutHookAsync(LayoutHooks.Head.First, StandardLayouts.Account)
-    <abp-style-bundle name="@LYearThemeBundles.Styles.Global"/>
+    <abp-style-bundle name="@LYearThemeBundles.Styles.Global" />
 
     @await Component.InvokeAsync(typeof(WidgetStylesViewComponent))
 
@@ -51,7 +51,7 @@
                         </div>
                         <abp-column size-md="_5" class="mx-auto">
                             @if (MultiTenancyOptions.Value.IsEnabled &&
-                          (TenantResolveResultAccessor.Result?.AppliedResolvers?.Contains(CookieTenantResolveContributor.ContributorName) == true))
+                         (TenantResolveResultAccessor.Result?.AppliedResolvers?.Contains(CookieTenantResolveContributor.ContributorName) == true))
                             {
                                 <div class="card shadow-sm rounded mb-3">
                                     <div class="card-body px-5">

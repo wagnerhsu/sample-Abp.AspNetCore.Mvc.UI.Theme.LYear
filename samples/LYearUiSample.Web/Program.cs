@@ -1,8 +1,8 @@
-﻿using System;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
+using System;
 
 namespace LYearUiSample.Web
 {
@@ -20,6 +20,7 @@ namespace LYearUiSample.Web
                 .MinimumLevel.Override("Microsoft.EntityFrameworkCore", LogEventLevel.Warning)
                 .Enrich.FromLogContext()
                 .WriteTo.Async(c => c.File("Logs/logs.txt"))
+                .WriteTo.Async(c => c.Console())
                 .CreateLogger();
 
             try
